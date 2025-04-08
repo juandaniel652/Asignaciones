@@ -1,0 +1,370 @@
+import Asignaciones
+import datetime
+from tkinter import END, messagebox
+
+
+def buscar_lunes(fecha) : 
+
+    fecha = fecha
+    dias_de_la_semana = fecha.weekday()
+    numero_de_dias_de_la_semana = [1, 2, 3, 4, 5, 6]
+
+    for dias in range (6) : 
+
+        if dias_de_la_semana == numero_de_dias_de_la_semana[dias] : 
+
+            dia_calendario = datetime.timedelta(days = numero_de_dias_de_la_semana[dias])
+            lunes = fecha - dia_calendario
+            return lunes
+
+        elif dias_de_la_semana == 0 : 
+
+            lunes = fecha
+            return lunes
+
+        else: 
+
+            Exception
+
+def renovar_semanas (lunes) : 
+
+    lista_semanas = []
+    lista_martes = []
+    lista_miercoles = []
+    lista_sabado = []
+    lista_domingo = []
+    lista_lunes = []
+    
+        
+    #LAS SEMANAS DENTRO DE LA CAJA SON DE 4 MESES; PARA DE ESA MANERA SE LLENE 3 VECES AL AÑO. 12/4 = 3
+    distancia_inicial = datetime.date(2024, 8, 19)
+    distancia_final = datetime.date(2025, 4, 19)
+    diferencia_dias = distancia_final - distancia_inicial
+    diferencia_semanas = diferencia_dias.days // 7
+    total_semanas = diferencia_semanas
+
+    #A partir del comienzo del bucle de los dias lunes, lo llevo a los domingos y asi se ejecuta
+    for numero_semanas in range (total_semanas) : 
+    
+        #Trabajo con los dias en el bucle
+        semana_nueva_actual = lunes + datetime.timedelta(weeks = numero_semanas)
+        semana_completa = semana_nueva_actual + datetime.timedelta(days = 6)
+        martes = semana_nueva_actual + datetime.timedelta(days = 1)
+        miercoles = semana_nueva_actual + datetime.timedelta(days = 2)
+        sabado = semana_nueva_actual + datetime.timedelta(days = 5)
+        domingo = semana_nueva_actual + datetime.timedelta(days = 6)
+
+        #Lunes y Domingo, Ademas de Miércoles y Sábado
+        primer_dia_de_la_semana = semana_nueva_actual.strftime("%d")
+        ultimo_dia_de_la_semana = semana_completa.strftime("%d")
+        reunion_especial_martes = martes.strftime("%d - %m - %Y")
+        reunion_especial_sabado = sabado.strftime("%d - %m - %Y")
+        reuniones_entre_semana = miercoles.strftime("%d - %m - %Y")
+        reuniones_fin_de_semana = domingo.strftime("%d - %m - %Y")
+        
+        #Mes y año para modo reunion
+        nombre_del_mes = semana_completa.strftime("%B")
+        numero_del_anio = semana_completa.strftime("%Y")
+
+        mostrador = f"Del {primer_dia_de_la_semana} al {ultimo_dia_de_la_semana} de {nombre_del_mes} {numero_del_anio}\n"
+        lista_semanas.append(mostrador)
+        lista_martes.append(reunion_especial_martes)
+        lista_miercoles.append(reuniones_entre_semana)
+        lista_sabado.append(reunion_especial_sabado)
+        lista_domingo.append(reuniones_fin_de_semana)
+        lista_lunes.append(semana_nueva_actual)
+
+    return lista_semanas, lista_miercoles, lista_domingo, lista_lunes, numero_semanas, distancia_final, lista_martes, lista_sabado
+
+
+def encontrar_semanas_especiales (lista_lunes, fechas_especiales, lista_semanas_totales) : 
+
+    semanas_especiales = []
+    fechas_totales = []
+
+    for lunes in range(len(lista_lunes)) :
+
+        for dias in range(7) : 
+
+            total_fechas = lista_lunes[lunes] + datetime.timedelta(days = dias)
+            fechas_totales.append(total_fechas)
+
+            if len(fechas_especiales) != 0 : 
+
+                for fechas in range(len(fechas_especiales)) : 
+
+                    if total_fechas == fechas_especiales[fechas] : 
+                        semana_especial = lista_semanas_totales[lunes]
+                        semanas_especiales.append(semana_especial)
+
+    return semanas_especiales, fechas_totales
+
+
+def calcular_distancia_fechas_especiales(dias_totales, fechas_especiales, nombre_eventos) : 
+
+    lista_semanas_restantes = []
+
+    if fechas_especiales[0] in dias_totales :
+
+        pass
+
+    else: 
+
+        if len(fechas_especiales) == 2 : 
+
+            fechas_especiales.pop(0)
+            nombre_eventos.pop(0)
+            
+        elif len(fechas_especiales) > 2 : 
+
+            fechas_especiales[0] = fechas_especiales[1] 
+            fechas_especiales.pop(0)
+            nombre_eventos.pop(0)
+            
+    for dias_especiales in range(len(fechas_especiales)) : 
+    
+        dias_restantes_a_fecha_especial = fechas_especiales[dias_especiales] - dias_totales[0]
+        semanas_restantes_a_fecha_especial = dias_restantes_a_fecha_especial.days // 7
+        lista_semanas_restantes.append(semanas_restantes_a_fecha_especial)
+
+    if semanas_restantes_a_fecha_especial < 0 : 
+
+        suma = semanas_restantes_a_fecha_especial + (semanas_restantes_a_fecha_especial * (-1))
+        return [suma], nombre_eventos
+
+    else : 
+
+        return lista_semanas_restantes, nombre_eventos; 
+
+
+def reubicar_grupos_desde_semanas_especiales (distancia_fechas_especiales, semanas_especiales, semanas_totales, indice, numero_grupo) : 
+    
+    try : 
+
+        if len(distancia_fechas_especiales) > 1 : 
+
+            ultima_semana_especial = len(distancia_fechas_especiales) - 1
+
+            for semanas in range(len(distancia_fechas_especiales)) : 
+
+                diferencia_entre_semanas_especiales =  distancia_fechas_especiales[semanas + 1] - distancia_fechas_especiales[semanas]
+
+                distancia_ultima_semana = distancia_fechas_especiales[ultima_semana_especial] - distancia_fechas_especiales[0]
+
+                for cantidad_semanas in range (diferencia_entre_semanas_especiales) : 
+
+                    if semanas_totales[indice - cantidad_semanas] == semanas_especiales[semanas]:
+
+                        if numero_grupo == 1 :
+
+                            return numero_grupo + 5
+
+                        else: 
+
+                            return numero_grupo - 1
+
+                    elif semanas_especiales[semanas] != semanas_especiales [0] : 
+
+                            return numero_grupo - 2
+
+
+                for distancia in range(distancia_ultima_semana):
+
+                    if semanas_totales[indice - distancia] == semanas_especiales[ultima_semana_especial] and distancia < indice:
+
+                        numeros_de_los_grupos = [1, 2, 3, 4, 5]
+                        acomodar_grupos = [4, 4, -2, -2]
+
+                        for numero_seleccionado in range(len(numeros_de_los_grupos)) : 
+
+                            if numero_grupo == numeros_de_los_grupos[numero_seleccionado]:
+
+                                return numero_grupo + acomodar_grupos[numero_seleccionado]
+
+
+        elif len(distancia_fechas_especiales) == 1 : 
+            
+            if numero_grupo == 1 : 
+
+                numero_grupo = numero_grupo + 5
+
+            elif numero_grupo != 1: 
+
+                numero_grupo = numero_grupo - 1
+
+            for distancia in range (len(distancia_fechas_especiales)) : 
+
+                restar_grupo = distancia_fechas_especiales[distancia]
+
+                if semanas_totales[restar_grupo] == semanas_especiales[0] and distancia_fechas_especiales[distancia] < indice: 
+                    
+                    if numero_grupo == 1 : 
+
+                        return numero_grupo + 5
+                    
+                    else:
+                        
+                        return numero_grupo - 1
+
+                else : 
+
+                    return numero_grupo
+
+    except : 
+
+        pass
+
+
+def buscar_grupos_por_semana (numero_del_grupo, sucesion_de_los_grupos, indice) : 
+    
+    if numero_del_grupo != sucesion_de_los_grupos[0] : 
+
+        if numero_del_grupo  == sucesion_de_los_grupos[1]  :
+            numero_del_grupo  = sucesion_de_los_grupos[indice - 2]
+            return numero_del_grupo
+
+        elif numero_del_grupo == sucesion_de_los_grupos[2] : 
+            numero_del_grupo  = sucesion_de_los_grupos[indice + 2]
+            return numero_del_grupo
+
+        elif numero_del_grupo == sucesion_de_los_grupos[3] : 
+            numero_del_grupo  = sucesion_de_los_grupos[indice]
+            return numero_del_grupo
+
+        elif numero_del_grupo == sucesion_de_los_grupos[4] : 
+            numero_del_grupo  = sucesion_de_los_grupos[indice - 2]
+            return numero_del_grupo
+
+        elif numero_del_grupo == sucesion_de_los_grupos[5] :
+            numero_del_grupo  = sucesion_de_los_grupos[indice + 2]
+            return numero_del_grupo
+
+    elif numero_del_grupo  == sucesion_de_los_grupos[0] : 
+        return numero_del_grupo
+
+    else :
+        return messagebox.showerror(Exception)
+    
+
+def mostrar_grupos_en_pantalla (numero_del_grupo, pantalla, grupo_1, grupo_2, grupo_3, grupo_4, grupo_5, grupo_6) :
+
+    grupos = [grupo_1, grupo_2, grupo_3, grupo_4, grupo_5, grupo_6]
+    posiciones = [1, 2, 3, 4, 5, 6]
+
+    for posicion in range(len(posiciones)):
+
+        if numero_del_grupo == posiciones[posicion]:  
+
+            pantalla.insert("2.0", f"Grupo: {numero_del_grupo}\n\n")
+
+            for integrante_del_grupo in grupos[posicion] : 
+                pantalla.insert("4.0",f"-{integrante_del_grupo}\n")
+            pantalla.config(state = "disabled") 
+
+            return numero_del_grupo
+
+
+def fechas_especiales_en_caja (nombre_eventos_actualizados, semanas_especiales, lista_semanas, indice, pantalla, remover_pantalla, listbox_acomodadores, listbox_vigilancia, 
+                            botones_acomodadores, botones_vigilancia, boton_entre_semana, boton_fin_de_semana) :
+
+
+    for semana_especial in range (len(semanas_especiales)) :
+
+        if semanas_especiales[semana_especial] == lista_semanas[indice] :
+
+            #PANTALLA
+            pantalla.config(state = "normal"); remover_pantalla.configure(state = "normal")
+            pantalla.delete("1.0", END)
+            pantalla.insert("1.0", f"{lista_semanas[indice]}\n")
+            pantalla.insert("4.0",f"⦿ {nombre_eventos_actualizados[semana_especial]}\n")
+            pantalla.config(state = "disabled"); remover_pantalla.configure(state = "disabled")
+
+            ##LISTBOX
+            listbox_acomodadores.delete(0, END); listbox_vigilancia.delete(0, END)
+
+            #BOTONES
+            boton_entre_semana.config(state = "disabled"); boton_fin_de_semana.config(state = "disabled")
+            
+            for botones in range(3) :
+                botones_acomodadores[botones].config(state = "disabled")
+                botones_vigilancia[botones].config(state = "disabled")
+
+            return nombre_eventos_actualizados[semana_especial]
+
+
+def remover_desde_grupos(numero_grupo, lista_vigilancia, listbox_vigilancia, grupo_1, grupo_2, grupo_3, grupo_4, grupo_5, grupo_6) : 
+
+    grupos = [grupo_1, grupo_2, grupo_3, grupo_4, grupo_5, grupo_6]
+    posiciones = [1, 2, 3, 4, 5, 6]
+    indice = 0
+
+    for posicion in range(len(grupos)) :
+
+        if numero_grupo == posiciones[posicion] and numero_grupo != None: 
+            listbox_vigilancia.delete(0, END)
+            eliminar_coincidencias = list(set(lista_vigilancia) - (set(grupos[posicion]))) 
+            eliminar_coincidencias.sort()
+            
+            for vigilancia in eliminar_coincidencias : 
+                
+                listbox_vigilancia.insert(indice, vigilancia)
+                indice = indice + 1
+
+            if len(eliminar_coincidencias) != len(lista_vigilancia) : 
+
+                union = list(set(lista_vigilancia) & (set(grupos[posicion])))
+
+                for remover in union : 
+
+                    lista_vigilancia.remove(remover)
+
+            return numero_grupo
+
+
+def buscar_dias_de_reuniones_especiales(lista_lunes, lista_semanas_totales, dias_especiales) : 
+
+    dias_de_reunion = []
+
+    for lunes in range(len(lista_lunes)) :
+
+        for dias in range(7) : 
+
+            total_fechas = lista_lunes[lunes] + datetime.timedelta(days = dias)
+
+            for fechas in range(len(dias_especiales)) : 
+
+                if total_fechas == dias_especiales[fechas] : 
+
+                    reuniones_especiales = lista_semanas_totales[lunes]
+                    dias_de_reunion.append(reuniones_especiales)
+
+    return dias_de_reunion    
+
+def convertir_fechas_entre_semana_especiales_a_formato_estandar(dias_especiales_entre_semana) : 
+
+    entre_semana_formato_estandar = []
+
+    if dias_especiales_entre_semana != None  : 
+            
+        for dias in range(len(dias_especiales_entre_semana)) : 
+
+            dias_especiales_entre_semana[dias] = dias_especiales_entre_semana[dias].strftime("%d - %m - %Y")
+
+            entre_semana_formato_estandar.append(dias_especiales_entre_semana[dias])
+    
+    return entre_semana_formato_estandar
+
+
+def convertir_fechas_fin_de_semana_especiales_a_formato_estandar(dias_especiales_fin_de_semana) : 
+
+    fin_de_semana_formato_estandar = []
+
+    if dias_especiales_fin_de_semana != None  : 
+            
+        for dias in range(len(dias_especiales_fin_de_semana)) : 
+
+            dias_especiales_fin_de_semana[dias] = dias_especiales_fin_de_semana[dias].strftime("%d - %m - %Y")
+
+            fin_de_semana_formato_estandar.append(dias_especiales_fin_de_semana[dias])
+    
+    return fin_de_semana_formato_estandar
