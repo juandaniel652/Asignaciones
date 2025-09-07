@@ -1,0 +1,18 @@
+1. Clientes: 
+	
+	- Entrada de datos
+	- Selecciona dia disponible
+	- Aparece en el listado los datos seleccionados
+
+2. Técnicos: 
+
+	- Entrada de datos
+	- Listado de técnicos
+
+3. Turnos: 
+
+	- Tabla de listado de turnos seleccionados entre 	técnico y su/s cliente/s
+
+4. Agenda: 
+
+	- En base a turnos se muestra en agenda los turnos

@@ -1,0 +1,11 @@
+✅ Conclusión:
+
+Capacidad SSD	¿Funciona bien?		¿Es recomendable?		Comentario
+
+---------------------------------------------------------------------------------------------------------------------
+
+240–256 GB	✅ Sí			✔️ Sí, básico y económico	Bueno para programación + apps
+
+480–512 GB	✅ Sí			✔️ Recomendado			Equilibrado para juegos y archivos
+
+960 GB		✅ Sí			✔️ Ideal si podés pagarlo 	Mucho espacio, sin preocuparte
