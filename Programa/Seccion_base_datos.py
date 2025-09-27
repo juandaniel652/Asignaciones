@@ -167,8 +167,9 @@ def mostrar_asignaciones_por_mes_seleccionado (treeview, indice_seleccionado) :
     for mes in range(len(meses)) : 
 
         if indice_seleccionado == meses[mes] : 
-        
-            cursor.execute(f"SELECT * FROM asignaciones WHERE Dias_reunion like '%- 0{meses[mes]} - %'") 
+            
+
+            cursor.execute(f"SELECT * FROM asignaciones WHERE Dias_reunion like '%- 0{meses[mes]} - %' OR Dias_reunion like '%- {meses[mes]} - %'") 
             datos = cursor.fetchall()
 
             for fila in treeview.get_children() :
@@ -191,7 +192,10 @@ def convertir_datos_del_mes_por_word (numero_del_mes_seleccionado, nombre_del_me
 
     conectar_base = sql.connect("asignaciones_de_congregacion.db")
     cursor = conectar_base.cursor()
-    cursor.execute("SELECT * FROM asignaciones WHERE Dias_reunion like ?", (f"%- 0{numero_del_mes_seleccionado} - {año_actual}%",)) 
+    cursor.execute(
+        "SELECT * FROM asignaciones WHERE Dias_reunion LIKE ? OR Dias_reunion LIKE ?",
+        (f"%- 0{numero_del_mes_seleccionado} - {año_actual}%", f"%- {numero_del_mes_seleccionado} - {año_actual}%")
+    )
     datos = cursor.fetchall()
     conectar_base.close()
 
@@ -215,7 +219,7 @@ def convertir_datos_del_mes_por_word (numero_del_mes_seleccionado, nombre_del_me
         titulos_de_acomodadores_y_vigilancia = ["\nACOMODADORES", "VIGILANCIA"]
         lista_de_los_parrafos = [
         [f"Acomodadores 1° Hora: {acomodadores_primera_hora}", f"Acomodadores 2° Hora: {acomodadores_segunda_hora}", f"Acomodador después de la reunión: {acomodador_ultima_hora}"],
-        [f"Vigilancia 1° Hora: {vigilancia_primera_hora}", f"Vigilancia 2° Hora: {vigilancia_segunda_hora}", f"Vigilancia después de la reunión: {vigilancia_ultima_hora }"]
+        [f"Vigilancia 1° Hora: {vigilancia_primera_hora}", f"Vigilancia 2° Hora: {vigilancia_segunda_hora}"]
     ]
         
         lista_dias_de_reunion.append(dias_de_reuniones)
