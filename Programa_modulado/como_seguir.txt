@@ -1,1 +1,0 @@
-Meterle a funcionalidad... Comprimir en .zip y con chatGPT meter la lógica
