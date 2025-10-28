@@ -1,7 +1,7 @@
 import random
 import tkinter as tk 
 from tkinter import ttk, END, font, PhotoImage, messagebox, Text, Toplevel, LEFT, Menu
-from PIL import Image, ImageTk
+from PIL import Image
 import locale
 import datetime
 import sqlite3 as sql
@@ -11,6 +11,7 @@ import Seccion_fechas
 import Seccion_treeview
 import Seccion_base_datos
 import Fondos 
+import platform
 
 class Aplicacion : 
 
@@ -47,7 +48,7 @@ class Aplicacion :
         self.listbox_vigilancia = tk.Listbox(self.pagina_1, relief = "raised", font = self.diseño_de_listbox, foreground = "#E0E0E0", background = "#424242")
         self.listbox_de_fechas = tk.Listbox(self.pagina_1, relief = "raised", font = self.diseño_de_listbox, foreground = "#E0E0E0", background = "#424242", width = 30)
 
-        self.root.iconbitmap(True, 'Programa\cuaderno.ico')  
+        self.validar_iconos_segun_sistema()
         
         self.final()
         
@@ -68,8 +69,18 @@ class Aplicacion :
         self.etiqueta_reloj.grid(column = 4, columnspan = 6 , row = 0)
 
         self.root.after(1000, self.actualizar_reloj)
+        
+    
+    def validar_iconos_segun_sistema (self) : 
 
 
+        if platform.system() == "Windows":
+            self.root.iconbitmap("Programa/img/cuaderno.ico")
+        else:
+            icon = tk.PhotoImage(file="Programa/img/cuaderno.png")
+            self.root.iconphoto(True, icon)
+
+    
 #==================================================================================================  
 
     #BOTONES VENTANA: opciones generales

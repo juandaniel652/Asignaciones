@@ -1,4 +1,0 @@
-ID: 3
-Nombre: Sebastiam
-Edad: 37
-Fecha: 01 - 05 - 1987
