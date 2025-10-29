@@ -12,6 +12,7 @@ import Seccion_treeview
 import Seccion_base_datos
 import Fondos 
 import platform
+from actualizaciones.comprobaciones import verificar_actualizacion
 
 class Aplicacion : 
 
@@ -74,12 +75,36 @@ class Aplicacion :
     def validar_iconos_segun_sistema (self) : 
 
 
-        if platform.system() == "Windows":
+        if platform.system() == "Windows" :
+            
             self.root.iconbitmap("Programa/img/cuaderno.ico")
-        else:
+            
+        else :
+            
             icon = tk.PhotoImage(file="Programa/img/cuaderno.png")
             self.root.iconphoto(True, icon)
+            
+    
+#==================================================================================================
 
+    #Actualizaciones
+    
+    def corroborar_actualizaciones (self) : 
+        
+        try : 
+        
+            actualizacion, nueva_version = verificar_actualizacion()
+
+            if not actualizacion:
+            
+                pass
+            
+            messagebox.showinfo("Actualización disponible", f"Hay una nueva versión disponible ({nueva_version}). Por favor, visite el repositorio para descargarla.")
+
+
+        except Exception as error: 
+            
+            print("Error al comprobar actualizaciones:", error)
     
 #==================================================================================================  
 
@@ -626,7 +651,7 @@ class Aplicacion :
         ventana_emergente.geometry("330x250")
         ventana_emergente.resizable(False, False) 
         ventana_emergente.wm_maxsize(400, 300) 
-        ventana_emergente.wm_attributes("-toolwindow", True)
+        ventana_emergente.wm_attributes("-topmost", True)
 
         nombre_del_mes_seleccioando = self.entrada_de_seleccion_de_lista.get()
         numero_del_mes_seleccionado = self.entrada_de_seleccion_de_lista.current()
