@@ -94,6 +94,7 @@ class Aplicacion :
         try : 
         
             actualizacion, nueva_version = verificar_actualizacion()
+            print(actualizacion)
 
             if not actualizacion:
             

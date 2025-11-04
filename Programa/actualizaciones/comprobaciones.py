@@ -1,30 +1,30 @@
 import requests
 import os
 
-VERSION_LOCAL = "1.6"
-URL_VERSION = "version.txt"
-URL_DESCARGA = "https://github.com/tuusuario/miapp/releases/latest/download/main"
 
-def verificar_actualizacion () :
-    
-    try :
+VERSION_LOCAL = "1.6"
+URL_VERSION = "https://pastebin.com/raw/vAYDdXDh"
+URL_DESCARGA = "https://github.com/juandaniel652/Asignaciones/commits/v1.6"
+
+def verificar_actualizacion():
+    try:
+        headers = {"User-Agent": "MiApp/1.6"}
+        r = requests.get(URL_VERSION, headers=headers, timeout=5)
+        if r.status_code == 200:
+            version_online = r.text.strip()
+            print(f"Versión local: {VERSION_LOCAL}")
+            print(f"Versión online: {version_online}")
+
+            if version_online != VERSION_LOCAL:
+                print("✅ Nueva versión disponible.")
+            else:
+                print("🟢 Ya tienes la última versión.")
+        else:
+            print("Error al obtener la versión:", r.status_code)
+
         
-        request = requests.get(URL_VERSION, timeout=5)
-        
-        if request.status_code == 200 :
-            
-            version_online = request.text.strip()
-            
-            if version_online != VERSION_LOCAL :
-                
-                return True, version_online
-            
-        return False, None
-    
-    except Exception as error :
-        
-        print("Error al verificar actualización:", error)
-        return False, None
+    except Exception as e:
+        print("Error al verificar actualización:", e)
 
 
 def descargar_actualizacion():
@@ -43,3 +43,8 @@ def descargar_actualizacion():
         # Podrías luego cerrar el programa y reemplazar el archivo actual
     except Exception as e:
         print("Error al descargar:", e)
+
+
+
+a = verificar_actualizacion()
+print(a)
