@@ -41,6 +41,10 @@ def descargar_actualizacion():
 
 
 def instalar_actualizacion():
+    
+    r = requests.get(URL_VERSION, timeout=5)
+    version_online = r.text.strip()
+    
     try:
         temp_dir = os.path.join(APP_DIR, "update_temp")
         os.makedirs(temp_dir, exist_ok=True)
