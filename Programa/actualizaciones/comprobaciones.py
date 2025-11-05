@@ -3,7 +3,7 @@ import os
 
 
 VERSION_LOCAL = "1.6"
-URL_VERSION = "https://pastebin.com/raw/vAYDdXDh"
+URL_VERSION = "https://raw.githubusercontent.com/juandaniel652/Asignaciones/refs/heads/main/Programa/actualizaciones/version.txt"
 URL_DESCARGA = "https://github.com/juandaniel652/Asignaciones/commits/v1.6"
 
 def verificar_actualizacion():
@@ -12,10 +12,9 @@ def verificar_actualizacion():
         r = requests.get(URL_VERSION, headers=headers, timeout=5)
         if r.status_code == 200:
             version_online = r.text.strip()
-            print(f"Versión local: {VERSION_LOCAL}")
-            print(f"Versión online: {version_online}")
 
             if version_online != VERSION_LOCAL:
+                print(version_online)
                 print("✅ Nueva versión disponible.")
             else:
                 print("🟢 Ya tienes la última versión.")
@@ -47,4 +46,3 @@ def descargar_actualizacion():
 
 
 a = verificar_actualizacion()
-print(a)
