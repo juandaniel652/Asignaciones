@@ -1,6 +1,6 @@
 import requests, os, zipfile, shutil
 
-VERSION_LOCAL = "1.6"
+VERSION_LOCAL = "1.6.1"
 URL_VERSION = "https://raw.githubusercontent.com/juandaniel652/Asignaciones/main/Programa/actualizaciones/version.txt"
 URL_DESCARGA = "https://github.com/juandaniel652/Asignaciones/releases/download/v1.6.1/Acomodadores.zip"
 
