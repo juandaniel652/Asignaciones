@@ -12,7 +12,9 @@ import Seccion_treeview
 import Seccion_base_datos
 import Fondos 
 import platform
+import sys, os
 from actualizaciones.comprobaciones import verificar_actualizacion
+
 
 class Aplicacion : 
 
@@ -72,6 +74,17 @@ class Aplicacion :
         self.root.after(1000, self.actualizar_reloj)
         
     
+    def resource_path(self, relative_path):
+        """Obtiene la ruta absoluta del recurso, compatible con PyInstaller."""
+        try:
+            # PyInstaller crea una carpeta temporal con los recursos empaquetados
+            base_path = sys._MEIPASS
+        except Exception:
+            base_path = os.path.abspath(".")
+        return os.path.join(base_path, relative_path)
+
+        
+    
     def validar_iconos_segun_sistema (self) : 
 
 
@@ -81,7 +94,7 @@ class Aplicacion :
             
         else :
             
-            icon = tk.PhotoImage(file="Programa/img/cuaderno.png")
+            icon = tk.PhotoImage(file= self.resource_path("Programa/img/cuaderno.png"))
             self.root.iconphoto(True, icon)
             
     
