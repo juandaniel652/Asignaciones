@@ -3,16 +3,13 @@
 import os
 from PyInstaller.utils.hooks import collect_data_files
 
-# Incluimos las carpetas reales necesarias
 datas = [
-    ('Programa/img/*', 'Programa/img'),   # imágenes y recursos gráficos
+    ('Programa/img/*', 'Programa/img'),
+    # Agregamos la base de datos que está fuera de la carpeta Programa
+    ('asignaciones_de_congregacion.db', '.'),
 ]
 
-# Si luego agregás iconos o base de datos, podés descomentar:
-# ('Programa/iconos/*', 'Programa/iconos'),
-# ('Programa/db/*', 'Programa/db'),
-
-# Recursos extra para PIL (Pillow)
+# Incluye recursos de PIL (por seguridad)
 datas += collect_data_files('PIL', include_py_files=True)
 
 a = Analysis(
@@ -43,5 +40,5 @@ exe = EXE(
     upx=True,
     console=False,
     disable_windowed_traceback=False,
-    icon='Programa/img/cuaderno.ico'
+    icon='Programa/img/cuaderno.png'
 )

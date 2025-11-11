@@ -53,6 +53,7 @@ class Aplicacion :
 
         self.validar_iconos_segun_sistema()
         
+        
         self.final()
         
     #==================================================================================================  
@@ -271,11 +272,11 @@ class Aplicacion :
 
         #Fechas
         fecha = datetime.datetime.now().date()
-        self.fechas_especiales_de_asamblea = [datetime.date(2025, 4, 27), datetime.date(2025, 10, 31)]
-        nombre_de_eventos = ["Asamblea de circuito 2024-2025\n(Con el representante de la sucursal)\n\n'No nos avergonzamos\nde las buenas noticias'. (Rom. 1:16)",
-                            "Asamblea Regional 2025\n\n         Adoración Pura\n(Mat. 4:10; Juan. 2:17; Juan. 4:23)"]
+        self.fechas_especiales_de_asamblea = [datetime.date(2025, 10, 31), datetime.date(2026, 3, 22)]
+        nombre_de_eventos = ["Asamblea Regional 2025\n\n         Adoración Pura\n(Mat. 4:10; Juan. 2:17; Juan. 4:23)",
+                            "Asamblea de circuito con el\nrepresentante de la sucursal"]
 
-        dias_de_reuniones_especiales_entre_semana = [datetime.date(2025, 7, 7)]
+        dias_de_reuniones_especiales_entre_semana = [datetime.date(2025, 7, 7), datetime.date(2026, 4, 2)]
         dias_de_reuniones_especiales_fin_de_semana = []
 
         dias_especiales_formato_estandar_entre_semana = Seccion_fechas.convertir_fechas_entre_semana_especiales_a_formato_estandar(dias_de_reuniones_especiales_entre_semana)
@@ -319,7 +320,7 @@ class Aplicacion :
 
         #Multiplico el ciclo de grupos recorrido (De esa manera, por cada semana está el ciclo adecuado de grupos)
         #Debe ser Domingo para que no haya cambios durante la semana
-        fecha_final_grupos = datetime.date(2033, 1, 30)
+        fecha_final_grupos = datetime.date(2033, 2, 6)
         diferencia_grupos = fecha_final_grupos - fecha
         dias_a_semanas_grupos = diferencia_grupos.days // 7
         grupos_ordenados_por_semanas = dias_a_semanas_grupos
