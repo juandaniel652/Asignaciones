@@ -136,10 +136,12 @@ def pasar_datos_word () :
     
     
 def convertir_datos_del_mes_por_word_whatsapp(numero_del_mes_seleccionado, nombre_del_mes_seleccionado):
-    """Genera documento Word con formato estilo WhatsApp según mes elegido."""
+    """Genera documento Word y TXT con formato WhatsApp según el mes elegido."""
+
     fecha_actual = datetime.datetime.now()
     año_actual = fecha_actual.year
 
+    # === 1️⃣ Conexión a base de datos
     conectar_base = sql.connect("asignaciones_de_congregacion.db")
     cursor = conectar_base.cursor()
     cursor.execute(
@@ -154,6 +156,7 @@ def convertir_datos_del_mes_por_word_whatsapp(numero_del_mes_seleccionado, nombr
     lista_de_titulos_de_acomodadores_vigilancia = []
     lista_de_los_parrafos_general = []
 
+    # === 2️⃣ Procesar cada fila
     for semanas in range(len(datos)):
         acomodadores_primera_hora = datos[semanas][1]
         acomodadores_segunda_hora = datos[semanas][2]
@@ -163,7 +166,7 @@ def convertir_datos_del_mes_por_word_whatsapp(numero_del_mes_seleccionado, nombr
         vigilancia_ultima_hora = datos[semanas][6]
         dias_de_reuniones = datos[semanas][7]
 
-        titulos = ["\nACOMODADORES", "VIGILANCIA"]
+        titulos = ["ACOMODADORES", "VIGILANCIA"]
         parrafos = [
             [
                 f"Acomodadores 1° Hora: {acomodadores_primera_hora}",
@@ -180,7 +183,7 @@ def convertir_datos_del_mes_por_word_whatsapp(numero_del_mes_seleccionado, nombr
         lista_de_titulos_de_acomodadores_vigilancia.append(titulos)
         lista_de_los_parrafos_general.append(parrafos)
 
-    # 🔹 Usamos la nueva función
+    # === 3️⃣ Generar documento Word (por compatibilidad con la función anterior)
     documento_whatsapp = convertidorMensajeWhatsApp.generar_documento_whatsapp(
         lista_de_titulos_de_acomodadores_vigilancia,
         lista_de_los_parrafos_general,
@@ -188,7 +191,33 @@ def convertir_datos_del_mes_por_word_whatsapp(numero_del_mes_seleccionado, nombr
         cantidad_de_datos
     )
 
-    documento_whatsapp.save(f"Asignaciones_de_{nombre_del_mes_seleccionado}_{año_actual}_WhatsApp.docx")
+    nombre_archivo_word = f"Asignaciones_de_{nombre_del_mes_seleccionado}_{año_actual}_WhatsApp.docx"
+    documento_whatsapp.save(nombre_archivo_word)
+
+    # === 4️⃣ Generar versión TXT con formato de WhatsApp
+    nombre_archivo_txt = f"Asignaciones_de_{nombre_del_mes_seleccionado}_{año_actual}_WhatsApp.txt"
+
+    with open(nombre_archivo_txt, "w", encoding="utf-8") as archivo_txt:
+        for cantidad in range(cantidad_de_datos):
+            archivo_txt.write(f"{lista_dias_de_reunion[cantidad]}\n\n")
+            archivo_txt.write("_________________________\n\n")
+
+            # --- Bloque ACOMODADORES ---
+            archivo_txt.write("```ACOMODADORES```\n")
+            archivo_txt.write("_______________________\n\n")
+            archivo_txt.write(f"*Acomodadores 1° Hora: {lista_de_los_parrafos_general[cantidad][0][0].split(': ')[1]}*\n")
+            archivo_txt.write(f"*Acomodadores 2° Hora: {lista_de_los_parrafos_general[cantidad][0][1].split(': ')[1]}*\n")
+            archivo_txt.write(f"*Acomodador después de la reunión: {lista_de_los_parrafos_general[cantidad][0][2].split(': ')[1]}*\n\n")
+            archivo_txt.write("_________________________\n\n")
+
+            # --- Bloque VIGILANCIA ---
+            archivo_txt.write("```VIGILANCIA```\n")
+            archivo_txt.write("_______________________\n\n")
+            archivo_txt.write(f"*Vigilancia 1° Hora: {lista_de_los_parrafos_general[cantidad][1][0].split(': ')[1]}*\n")
+            archivo_txt.write(f"*Vigilancia 2° Hora: {lista_de_los_parrafos_general[cantidad][1][1].split(': ')[1]}*\n\n")
+            archivo_txt.write("_________________________\n\n\n")
+
+    print(f"✅ Archivos generados correctamente:\n- {nombre_archivo_word}\n- {nombre_archivo_txt}")
 
 
 
