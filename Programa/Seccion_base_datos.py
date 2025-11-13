@@ -1,5 +1,6 @@
 import sqlite3 as sql
 import Elementos_word   
+import convertidorMensajeWhatsApp
 import pandas as pd
 from docx2pdf import convert
 import datetime
@@ -132,6 +133,63 @@ def pasar_datos_word () :
         
     generador_de_documentos_word = Elementos_word.generar_documento_word(lista_de_titulos_de_acomodadores_vigilancia, lista_de_los_parrafos_general, lista_dias_de_reunion, cantidad_de_datos)
     generador_de_documentos_word.save("Asignaciones.docx")
+    
+    
+def convertir_datos_del_mes_por_word_whatsapp(numero_del_mes_seleccionado, nombre_del_mes_seleccionado):
+    """Genera documento Word con formato estilo WhatsApp según mes elegido."""
+    fecha_actual = datetime.datetime.now()
+    año_actual = fecha_actual.year
+
+    conectar_base = sql.connect("asignaciones_de_congregacion.db")
+    cursor = conectar_base.cursor()
+    cursor.execute(
+        "SELECT * FROM asignaciones WHERE Dias_reunion LIKE ? OR Dias_reunion LIKE ?",
+        (f"%- 0{numero_del_mes_seleccionado} - {año_actual}%", f"%- {numero_del_mes_seleccionado} - {año_actual}%")
+    )
+    datos = cursor.fetchall()
+    conectar_base.close()
+
+    cantidad_de_datos = len(datos)
+    lista_dias_de_reunion = []
+    lista_de_titulos_de_acomodadores_vigilancia = []
+    lista_de_los_parrafos_general = []
+
+    for semanas in range(len(datos)):
+        acomodadores_primera_hora = datos[semanas][1]
+        acomodadores_segunda_hora = datos[semanas][2]
+        acomodador_ultima_hora = datos[semanas][3]
+        vigilancia_primera_hora = datos[semanas][4]
+        vigilancia_segunda_hora = datos[semanas][5]
+        vigilancia_ultima_hora = datos[semanas][6]
+        dias_de_reuniones = datos[semanas][7]
+
+        titulos = ["\nACOMODADORES", "VIGILANCIA"]
+        parrafos = [
+            [
+                f"Acomodadores 1° Hora: {acomodadores_primera_hora}",
+                f"Acomodadores 2° Hora: {acomodadores_segunda_hora}",
+                f"Acomodador después de la reunión: {acomodador_ultima_hora}"
+            ],
+            [
+                f"Vigilancia 1° Hora: {vigilancia_primera_hora}",
+                f"Vigilancia 2° Hora: {vigilancia_segunda_hora}"
+            ]
+        ]
+
+        lista_dias_de_reunion.append(dias_de_reuniones)
+        lista_de_titulos_de_acomodadores_vigilancia.append(titulos)
+        lista_de_los_parrafos_general.append(parrafos)
+
+    # 🔹 Usamos la nueva función
+    documento_whatsapp = convertidorMensajeWhatsApp.generar_documento_whatsapp(
+        lista_de_titulos_de_acomodadores_vigilancia,
+        lista_de_los_parrafos_general,
+        lista_dias_de_reunion,
+        cantidad_de_datos
+    )
+
+    documento_whatsapp.save(f"Asignaciones_de_{nombre_del_mes_seleccionado}_{año_actual}_WhatsApp.docx")
+
 
 
 def pasar_datos_pdf () : 

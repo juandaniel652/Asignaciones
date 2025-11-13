@@ -1,6 +1,6 @@
 import random
 import tkinter as tk 
-from tkinter import ttk, END, font, PhotoImage, messagebox, Text, Toplevel, LEFT, Menu
+from tkinter import ttk, END, font, PhotoImage, messagebox, Text, Toplevel, LEFT, Menu, RIGHT
 from PIL import Image
 import locale
 import datetime
@@ -663,9 +663,9 @@ class Aplicacion :
 
         ventana_emergente = tk.Toplevel(self.pagina_2)
         ventana_emergente.title("Selecciona el tipo de convertor")
-        ventana_emergente.geometry("330x250")
+        ventana_emergente.geometry("600x600")
         ventana_emergente.resizable(False, False) 
-        ventana_emergente.wm_maxsize(400, 300) 
+        ventana_emergente.wm_maxsize(600, 600) 
         ventana_emergente.wm_attributes("-topmost", True)
 
         nombre_del_mes_seleccioando = self.entrada_de_seleccion_de_lista.get()
@@ -694,13 +694,21 @@ class Aplicacion :
             ventana_emergente.destroy()
 
 
+        def convertir_datos_del_mes_por_whatsapp () : 
+
+            funcion_wspp_mes_especifico = Seccion_base_datos.convertir_datos_del_mes_por_word_whatsapp(numero_del_mes_seleccionado, nombre_del_mes_seleccioando)
+            messagebox.showinfo("Información", "Los datos han sido convertidos a mensaje de Whatsapp exitosamente")
+            ventana_emergente.destroy()
+
         boton_word = tk.Button(ventana_emergente, text = "Word", background = "#1976D2", foreground = "white" , relief = "groove" , activebackground = "gray95" , activeforeground = "#333333" , border = 10, width = 10, command = convertir_datos_del_mes_por_word)
         boton_pdf = tk.Button(ventana_emergente, text = "PDF", background = "#1976D2", foreground = "white" , relief = "groove" , activebackground = "gray95" , activeforeground = "#333333" , border = 10, width = 10, command = convertir_datos_del_mes_por_pdf)
         boton_excel = tk.Button(ventana_emergente, text = "Excel", background = "#1976D2", foreground = "white" , relief = "groove" , activebackground = "gray95" , activeforeground = "#333333" , border = 10, width = 10, command = convertir_datos_del_mes_por_excel)
+        boton_whatsapp = tk.Button(ventana_emergente, text = "WhatsApp", background = "#1976D2", foreground = "white" , relief = "groove" , activebackground = "gray95" , activeforeground = "#333333" , border = 10, width = 10, command = convertir_datos_del_mes_por_whatsapp)
 
         boton_word.pack(side = LEFT, padx = 4)
         boton_pdf.pack(side = LEFT, padx = 4)
-        boton_excel.pack(side = LEFT, padx = 4)
+        boton_excel.pack(side = RIGHT, padx = 4)
+        boton_whatsapp.pack(side = RIGHT, padx = 4)
 
 
     def transportar_datos_a_aplicacion_movil (self) : 
