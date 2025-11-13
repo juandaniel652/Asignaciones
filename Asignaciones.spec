@@ -1,30 +1,19 @@
 # -*- mode: python ; coding: utf-8 -*-
 
-import os
-from PyInstaller.utils.hooks import collect_data_files
-
-datas = [
-    ('Programa/img/*', 'Programa/img'),
-    # Agregamos la base de datos que está fuera de la carpeta Programa
-    ('asignaciones_de_congregacion.db', '.'),
-]
-
-# Incluye recursos de PIL (por seguridad)
-datas += collect_data_files('PIL', include_py_files=True)
 
 a = Analysis(
     ['Programa/Asignaciones.py'],
-    pathex=[os.getcwd()],
+    pathex=[],
     binaries=[],
-    datas=datas,
+    datas=[('Programa/img/*', 'Programa/img'), ('asignaciones_de_congregacion.db', '.')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
     runtime_hooks=[],
     excludes=[],
     noarchive=False,
+    optimize=0,
 )
-
 pyz = PYZ(a.pure)
 
 exe = EXE(
@@ -38,7 +27,13 @@ exe = EXE(
     bootloader_ignore_signals=False,
     strip=False,
     upx=True,
+    upx_exclude=[],
+    runtime_tmpdir=None,
     console=False,
     disable_windowed_traceback=False,
-    icon='Programa/img/cuaderno.png'
+    argv_emulation=False,
+    target_arch=None,
+    codesign_identity=None,
+    entitlements_file=None,
+    icon=['Programa/img/cuaderno.png'],
 )
