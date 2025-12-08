@@ -232,7 +232,7 @@ def seleccionar_pareja_acomodadores (identificador_columnas, identificador_filas
     ventana_emergente.geometry("200x210")
     ventana_emergente.resizable(False, False) 
     ventana_emergente.wm_maxsize(400, 300) 
-    ventana_emergente.wm_attributes("-toolwindow", True)
+    ventana_emergente.wm_attributes("-alpha", True)
 
     listbox = tk.Listbox(ventana_emergente, selectmode = "multiple")
     listbox.pack(fill = "both", expand = True)
@@ -272,7 +272,7 @@ def eleccion_dia(seleccion, identificador_columnas, listbox, identificador_filas
     ventana_emergente.geometry("258x175")
     ventana_emergente.resizable(False, False) 
     ventana_emergente.wm_maxsize(400, 300) 
-    ventana_emergente.wm_attributes("-toolwindow", True)
+    ventana_emergente.wm_attributes("-alpha", True)
 
     etiqueta_consulta = tk.Label(ventana_emergente, text="¿Qué dia de reunión es?\n¿Entre Semana o Fin de semana?", font=("Helvetica", 12, "bold"))
     etiqueta_consulta.pack(pady=5)

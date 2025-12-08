@@ -136,37 +136,34 @@ def pasar_datos_word () :
     
     
 def convertir_datos_del_mes_por_word_whatsapp(numero_del_mes_seleccionado, nombre_del_mes_seleccionado):
-    """Genera documento Word y TXT con formato WhatsApp según el mes elegido."""
 
     fecha_actual = datetime.datetime.now()
     año_actual = fecha_actual.year
 
-    # === 1️⃣ Conexión a base de datos
+    # === 1️⃣ Buscar datos en la base
     conectar_base = sql.connect("asignaciones_de_congregacion.db")
     cursor = conectar_base.cursor()
     cursor.execute(
         "SELECT * FROM asignaciones WHERE Dias_reunion LIKE ? OR Dias_reunion LIKE ?",
-        (f"%- 0{numero_del_mes_seleccionado} - {año_actual}%", f"%- {numero_del_mes_seleccionado} - {año_actual}%")
+        (f"%- 0{numero_del_mes_seleccionado} - {año_actual}%",
+         f"%- {numero_del_mes_seleccionado} - {año_actual}%")
     )
     datos = cursor.fetchall()
     conectar_base.close()
 
-    cantidad_de_datos = len(datos)
+    # === Listas donde vamos guardando
     lista_dias_de_reunion = []
-    lista_de_titulos_de_acomodadores_vigilancia = []
     lista_de_los_parrafos_general = []
 
-    # === 2️⃣ Procesar cada fila
-    for semanas in range(len(datos)):
-        acomodadores_primera_hora = datos[semanas][1]
-        acomodadores_segunda_hora = datos[semanas][2]
-        acomodador_ultima_hora = datos[semanas][3]
-        vigilancia_primera_hora = datos[semanas][4]
-        vigilancia_segunda_hora = datos[semanas][5]
-        vigilancia_ultima_hora = datos[semanas][6]
-        dias_de_reuniones = datos[semanas][7]
+    # === 2️⃣ Procesar filas
+    for fila in datos:
+        acomodadores_primera_hora = fila[1]
+        acomodadores_segunda_hora = fila[2]
+        acomodador_ultima_hora = fila[3]
+        vigilancia_primera_hora = fila[4]
+        vigilancia_segunda_hora = fila[5]
+        dias_de_reuniones = fila[7]
 
-        titulos = ["ACOMODADORES", "VIGILANCIA"]
         parrafos = [
             [
                 f"Acomodadores 1° Hora: {acomodadores_primera_hora}",
@@ -180,45 +177,68 @@ def convertir_datos_del_mes_por_word_whatsapp(numero_del_mes_seleccionado, nombr
         ]
 
         lista_dias_de_reunion.append(dias_de_reuniones)
-        lista_de_titulos_de_acomodadores_vigilancia.append(titulos)
         lista_de_los_parrafos_general.append(parrafos)
 
-    # === 3️⃣ Generar documento Word (por compatibilidad con la función anterior)
-    documento_whatsapp = convertidorMensajeWhatsApp.generar_documento_whatsapp(
-        lista_de_titulos_de_acomodadores_vigilancia,
-        lista_de_los_parrafos_general,
-        lista_dias_de_reunion,
-        cantidad_de_datos
-    )
+    # === 3️⃣ Construir el HTML (fuera del for anterior)
 
-    nombre_archivo_word = f"Asignaciones_de_{nombre_del_mes_seleccionado}_{año_actual}_WhatsApp.docx"
-    documento_whatsapp.save(nombre_archivo_word)
+    html_contenido = """
+        <meta charset="UTF-8">
 
-    # === 4️⃣ Generar versión TXT con formato de WhatsApp
-    nombre_archivo_txt = f"Asignaciones_de_{nombre_del_mes_seleccionado}_{año_actual}_WhatsApp.txt"
+        <style>
+            body { 
+                font-family: Arial, sans-serif; 
+                padding: 20px;
+                line-height: 1.5;
+                white-space: pre-line;
+            }
+            .bloque { margin-bottom: 60px; }
+            .titulo-dia { font-size: 20px; font-weight: bold; margin-bottom: 25px; }
+            .linea { margin: 20px 0; font-weight: bold; }
+            .bloque-titulo { margin: 30px 0 20px 0; font-family: monospace; font-size: 18px; }
+            .item { margin: 20px 0; }
+        </style>
+        """
 
-    with open(nombre_archivo_txt, "w", encoding="utf-8") as archivo_txt:
-        for cantidad in range(cantidad_de_datos):
-            archivo_txt.write(f"{lista_dias_de_reunion[cantidad]}\n\n")
-            archivo_txt.write("_________________________\n\n")
+    # === 4️⃣ Generar bloques por cada día
+    for i in range(len(lista_dias_de_reunion)):
 
-            # --- Bloque ACOMODADORES ---
-            archivo_txt.write("```ACOMODADORES```\n")
-            archivo_txt.write("_______________________\n\n")
-            archivo_txt.write(f"*Acomodadores 1° Hora: {lista_de_los_parrafos_general[cantidad][0][0].split(': ')[1]}*\n")
-            archivo_txt.write(f"*Acomodadores 2° Hora: {lista_de_los_parrafos_general[cantidad][0][1].split(': ')[1]}*\n")
-            archivo_txt.write(f"*Acomodador después de la reunión: {lista_de_los_parrafos_general[cantidad][0][2].split(': ')[1]}*\n\n")
-            archivo_txt.write("_________________________\n\n")
+        html_contenido += f"""
+        <div class="bloque">
+        
+        {lista_dias_de_reunion[i]}
+        
+        _________________________
+        
+        ```ACOMODADORES```
+        _________________________
+        
+        *{lista_de_los_parrafos_general[i][0][0]}*
+        
+        *{lista_de_los_parrafos_general[i][0][1]}*
+        
+        *{lista_de_los_parrafos_general[i][0][2]}*
+        
+        _________________________
+        
+        ```VIGILANCIA```
+        _________________________
+        
+        *{lista_de_los_parrafos_general[i][1][0]}*
+        
+        *{lista_de_los_parrafos_general[i][1][1]}*
+        
+        _________________________
+        
+        </div>
+        """
 
-            # --- Bloque VIGILANCIA ---
-            archivo_txt.write("```VIGILANCIA```\n")
-            archivo_txt.write("_______________________\n\n")
-            archivo_txt.write(f"*Vigilancia 1° Hora: {lista_de_los_parrafos_general[cantidad][1][0].split(': ')[1]}*\n")
-            archivo_txt.write(f"*Vigilancia 2° Hora: {lista_de_los_parrafos_general[cantidad][1][1].split(': ')[1]}*\n\n")
-            archivo_txt.write("_________________________\n\n\n")
+    # === 5️⃣ Guardar archivo (solo una vez)
+    nombre_archivo_html = f"Asignaciones_de_{nombre_del_mes_seleccionado}_{año_actual}_WhatsApp.html"
 
-    print(f"✅ Archivos generados correctamente:\n- {nombre_archivo_word}\n- {nombre_archivo_txt}")
+    with open(nombre_archivo_html, "w", encoding="utf-8") as archivo_html:
+        archivo_html.write(html_contenido)
 
+    print(f"✅ Archivo HTML generado correctamente:\n- {nombre_archivo_html}")
 
 
 def pasar_datos_pdf () : 
