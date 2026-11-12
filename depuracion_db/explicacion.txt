@@ -1,0 +1,28 @@
+Usaremos 3 funciones o maneras de encontrar al mismo hermano asignado y luego hermana
+
+---------------------
+
+En Acomodadores 1 y 2 hora
+
+nombre hermano /
+/ nombre hermano
+
+---------------------
+
+En acomodador final
+
+nombre hermano
+
+--------------------
+
+vigilancia en cualquiera que haya 
+
+nombre hermana
+
+--SELECT Dias_reunion FROM asignaciones WHERE Acomodadores_1_HS° like 'Altamirano Elias /%' ;
+--SELECT Dias_reunion FROM asignaciones WHERE Acomodadores_2_HS° like 'Altamirano Elias /%' ;
+--SELECT Dias_reunion FROM asignaciones WHERE Acomodadores_1_HS° like '%/ Altamirano Elias' ;
+--SELECT Dias_reunion FROM asignaciones WHERE Acomodadores_2_HS° like '%/ Altamirano Elias' ;
+--SELECT Dias_reunion FROM asignaciones WHERE Acomodador_final = 'Altamirano Elias'
+
+Osea qe siga en realida el modelo anteiror pero especificado, mas facil

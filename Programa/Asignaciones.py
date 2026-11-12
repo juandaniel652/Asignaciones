@@ -225,7 +225,7 @@ class Aplicacion :
                                 'Coronel Vanesa', 'Deiana Ruth', 'Dominguez Alejandra', 
                                 'Dominguez Miriam', 'Encina Mónica', 'Ferreira Rocio', 
                                 'Gomez Yanina', 'Gonzalez Iris', 'Israelson Analia', 
-                                'Ledesma Susana', 'Quiroz Rosario', 'Sotelo Rosa', 
+                                'Ledesma Susana', 'Quiroz Rosario', 'Sotelo Rosa', 'Valiente Brisa'
                                 'Valiente Fátima', 'Valiente Silvia', 'Viera Valeria']
         
         Seccion_vigilancia.ordenamiento(self.lista_vigilancia, self.listbox_vigilancia)

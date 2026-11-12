@@ -1,0 +1,87 @@
+proyecto_asignaciones/
+│
+├── src/
+│   ├── __init__.py
+│   │
+│   ├── config/
+│   │   ├── __init__.py
+│   │   ├── settings.py           # Configuraciones globales
+│   │   └── constants.py          # Constantes (colores, tamaños, textos)
+│   │
+│   ├── models/
+│   │   ├── __init__.py
+│   │   ├── asignacion.py         # Modelo de datos de asignación
+│   │   ├── persona.py            # Modelo de persona (acomodador/vigilante)
+│   │   └── semana.py             # Modelo de semana
+│   │
+│   ├── database/
+│   │   ├── __init__.py
+│   │   ├── db_manager.py         # Gestor principal de BD
+│   │   ├── repositories/
+│   │   │   ├── __init__.py
+│   │   │   ├── asignacion_repository.py
+│   │   │   └── persona_repository.py
+│   │   └── migrations/           # Scripts de migración
+│   │
+│   ├── services/
+│   │   ├── __init__.py
+│   │   ├── asignacion_service.py      # Lógica de negocio de asignaciones
+│   │   ├── fecha_service.py           # Lógica de fechas y semanas
+│   │   ├── grupo_limpieza_service.py  # Lógica de grupos de limpieza
+│   │   ├── seleccion_service.py       # Lógica de selección aleatoria
+│   │   └── export_service.py          # Exportación a Word/PDF/Excel
+│   │
+│   ├── ui/
+│   │   ├── __init__.py
+│   │   ├── main_window.py             # Ventana principal
+│   │   ├── components/
+│   │   │   ├── __init__.py
+│   │   │   ├── acomodadores_panel.py
+│   │   │   ├── vigilancia_panel.py
+│   │   │   ├── fechas_panel.py
+│   │   │   ├── limpieza_panel.py
+│   │   │   └── asignaciones_table.py  # TreeView reutilizable
+│   │   ├── pages/
+│   │   │   ├── __init__.py
+│   │   │   ├── ingreso_page.py        # Página de ingreso
+│   │   │   └── historial_page.py      # Página de historial
+│   │   ├── dialogs/
+│   │   │   ├── __init__.py
+│   │   │   ├── editar_celda_dialog.py
+│   │   │   └── conversion_dialog.py
+│   │   └── themes/
+│   │       ├── __init__.py
+│   │       ├── theme_manager.py
+│   │       └── styles.py
+│   │
+│   ├── utils/
+│   │   ├── __init__.py
+│   │   ├── date_utils.py              # Utilidades de fechas
+│   │   ├── file_utils.py              # Utilidades de archivos
+│   │   ├── validators.py              # Validadores
+│   │   └── formatters.py              # Formateadores
+│   │
+│   └── resources/
+│       ├── icons/
+│       │   ├── cuaderno.ico
+│       │   └── cuaderno.png
+│       └── fonts/
+│
+├── tests/
+│   ├── __init__.py
+│   ├── test_services/
+│   ├── test_models/
+│   └── test_utils/
+│
+├── docs/
+│   ├── arquitectura.md
+│   ├── instalacion.md
+│   └── manual_usuario.md
+│
+├── actualizaciones/
+│   └── comprobaciones.py
+│
+├── requirements.txt
+├── setup.py
+├── README.md
+└── main.py                            # Punto de entrada
