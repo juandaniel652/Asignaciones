@@ -1,0 +1,416 @@
+Acomodadores 1ª Hora despues del /:
+
+con su id:
+
+Nombre Completo = Altamirano Elias- Id = 14 - 2025-04-30
+Nombre Completo = Altamirano Elias- Id = 14 - 2025-06-01
+Nombre Completo = Altamirano Elias- Id = 14 - 2025-08-06
+Nombre Completo = Altamirano Elias- Id = 14 - 2025-09-07
+Nombre Completo = Altamirano Elias- Id = 14 - 2025-10-05
+Nombre Completo = Altamirano Elias- Id = 14 - 2025-10-22
+Nombre Completo = Altamirano Elias- Id = 14 - 2025-12-03
+Nombre Completo = Altamirano Martin- Id = 15 - 2025-06-11
+Nombre Completo = Altamirano Martin- Id = 15 - 2025-08-03
+Nombre Completo = Altamirano Martin- Id = 15 - 2025-08-27
+Nombre Completo = Altamirano Martin- Id = 15 - 2025-09-17
+Nombre Completo = Altamirano Martin- Id = 15 - 2025-10-15
+Nombre Completo = Altamirano Horacio- Id = 16 - 2025-09-03
+Nombre Completo = Dominguez Joel- Id = 17 - 2025-02-23
+Nombre Completo = Dominguez Joel- Id = 17 - 2025-04-20
+Nombre Completo = Dominguez Joel- Id = 17 - 2025-05-28
+Nombre Completo = Dominguez Joel- Id = 17 - 2025-10-12
+Nombre Completo = Encina Gerardo- Id = 18 - 2025-03-23
+Nombre Completo = Encina Gerardo- Id = 18 - 2025-04-06
+Nombre Completo = Encina Gerardo- Id = 18 - 2025-06-22
+Nombre Completo = Encina Gerardo- Id = 18 - 2025-12-24
+Nombre Completo = Encina Gerardo- Id = 18 - 2025-12-28
+Nombre Completo = Ferreira David- Id = 19 - 2025-04-16
+Nombre Completo = Ferreira David- Id = 19 - 2025-06-25
+Nombre Completo = Ferreira David- Id = 19 - 2025-07-02
+Nombre Completo = Ferreira David- Id = 19 - 2025-07-20
+Nombre Completo = Ferreira David- Id = 19 - 2025-07-23
+Nombre Completo = Ferreira David- Id = 19 - 2025-09-14
+Nombre Completo = Ferreira David- Id = 19 - 2025-09-21
+Nombre Completo = Ferreira David- Id = 19 - 2025-10-26
+Nombre Completo = Gracia Enrique- Id = 20 - 2025-02-19
+Nombre Completo = Gracia Enrique- Id = 20 - 2025-03-09
+Nombre Completo = Gracia Enrique- Id = 20 - 2025-04-09
+Nombre Completo = Gracia Enrique- Id = 20 - 2025-05-11
+Nombre Completo = Gracia Enrique- Id = 20 - 2025-05-14
+Nombre Completo = Gracia Enrique- Id = 20 - 2025-06-18
+Nombre Completo = Gracia Enrique- Id = 20 - 2025-06-29
+Nombre Completo = Gracia Enrique- Id = 20 - 2025-07-16
+Nombre Completo = Gracia Enrique- Id = 20 - 2025-08-17
+Nombre Completo = Gracia Enrique- Id = 20 - 2025-10-19
+Nombre Completo = Gracia Enrique- Id = 20 - 2025-12-14
+Nombre Completo = Israelson Fernando- Id = 21 - 2025-03-12
+Nombre Completo = Israelson Fernando- Id = 21 - 2025-03-26
+Nombre Completo = Israelson Fernando- Id = 21 - 2025-06-04
+Nombre Completo = Israelson Fernando- Id = 21 - 2025-07-06
+Nombre Completo = Israelson Fernando- Id = 21 - 2025-07-13
+Nombre Completo = Israelson Fernando- Id = 21 - 2025-12-10
+Nombre Completo = Israelson Fernando- Id = 21 - 2025-12-21
+Nombre Completo = Ontiveros Juan- Id = 22 - 2025-08-13
+Nombre Completo = Ontiveros Juan- Id = 22 - 2025-08-20
+Nombre Completo = Ontiveros Juan- Id = 22 - 2025-09-28
+Nombre Completo = Ontiveros Juan- Id = 22 - 2025-12-17
+Nombre Completo = Ontiveros Juan- Id = 22 - 2025-12-31
+Nombre Completo = Ortiz Aureliano- Id = 23 - 2025-03-02
+Nombre Completo = Ortiz Aureliano- Id = 23 - 2025-04-02
+Nombre Completo = Ortiz Aureliano- Id = 23 - 2025-05-18
+Nombre Completo = Ortiz Aureliano- Id = 23 - 2025-08-10
+Nombre Completo = Ortiz Aureliano- Id = 23 - 2025-09-24
+Nombre Completo = Ortiz Aureliano- Id = 23 - 2025-10-01
+Nombre Completo = Valiente Walter- Id = 24 - 2025-05-25
+Nombre Completo = Valiente Walter- Id = 24 - 2025-03-16
+Nombre Completo = Valiente Walter- Id = 24 - 2025-05-22
+Nombre Completo = Valiente Walter- Id = 24 - 2025-06-08
+Nombre Completo = Valiente Walter- Id = 24 - 2025-07-27
+Nombre Completo = Valiente Walter- Id = 24 - 2025-07-30
+Nombre Completo = Valiente Walter- Id = 24 - 2025-08-31
+Nombre Completo = Valiente Walter- Id = 24 - 2025-10-08
+Nombre Completo = Valiente Walter- Id = 24 - 2025-12-07
+Nombre Completo = Viera Cristian- Id = 25 - 2025-07-09
+Nombre Completo = Viera Cristian- Id = 25 - 2025-08-24
+Nombre Completo = Viera Cristian- Id = 25 - 2025-09-10
+Nombre Completo = Vallejos Horacio- Id = 30 - 2025-02-26
+Nombre Completo = Vallejos Horacio- Id = 30 - 2025-03-05
+Nombre Completo = Vallejos Horacio- Id = 30 - 2025-03-19
+Nombre Completo = Vallejos Horacio- Id = 30 - 2025-03-29
+Nombre Completo = Vallejos Horacio- Id = 30 - 2025-05-04
+Nombre Completo = Vallejos Horacio- Id = 30 - 2025-05-07
+Nombre Completo = Vallejos Horacio- Id = 30 - 2025-06-15
+
+
+formato a pasar en pgadmin4: ESTA PRIMERA PARTE YA MENCIONADA EN EL TITLO: 
+
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (14, 2025-04-30)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (14, 2025-06-01)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (14, 2025-08-06)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (14, 2025-09-07)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (14, 2025-10-05)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (14, 2025-10-22)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (14, 2025-12-03)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (15, 2025-06-11)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (15, 2025-08-03)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (15, 2025-08-27)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (15, 2025-09-17)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (15, 2025-10-15)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (16, 2025-09-03)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (17, 2025-02-23)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (17, 2025-04-20)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (17, 2025-05-28)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (17, 2025-10-12)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (18, 2025-03-23)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (18, 2025-04-06)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (18, 2025-06-22)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (18, 2025-12-24)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (18, 2025-12-28)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (19, 2025-04-16)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (19, 2025-06-25)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (19, 2025-07-02)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (19, 2025-07-20)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (19, 2025-07-23)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (19, 2025-09-14)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (19, 2025-09-21)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (19, 2025-10-26)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (20, 2025-02-19)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (20, 2025-03-09)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (20, 2025-04-09)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (20, 2025-05-11)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (20, 2025-05-14)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (20, 2025-06-18)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (20, 2025-06-29)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (20, 2025-07-16)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (20, 2025-08-17)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (20, 2025-10-19)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (20, 2025-12-14)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (21, 2025-03-12)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (21, 2025-03-26)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (21, 2025-06-04)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (21, 2025-07-06)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (21, 2025-07-13)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (21, 2025-12-10)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (21, 2025-12-21)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (22, 2025-08-13)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (22, 2025-08-20)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (22, 2025-09-28)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (22, 2025-12-17)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (22, 2025-12-31)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (23, 2025-03-02)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (23, 2025-04-02)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (23, 2025-05-18)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (23, 2025-08-10)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (23, 2025-09-24)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (23, 2025-10-01)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (24, 2025-05-25)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (24, 2025-03-16)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (24, 2025-05-22)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (24, 2025-06-08)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (24, 2025-07-27)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (24, 2025-07-30)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (24, 2025-08-31)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (24, 2025-10-08)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (24, 2025-12-07)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (25, 2025-07-09)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (25, 2025-08-24)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (25, 2025-09-10)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (30, 2025-02-26)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (30, 2025-03-05)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (30, 2025-03-19)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (30, 2025-03-29)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (30, 2025-05-04)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (30, 2025-05-07)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (30, 2025-06-15)
+
+
+---------------------------------------------------
+
+Ahora para segunda hora luego del /:
+
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (14, 2025-03-23)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (14, 2025-04-20)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (14, 2025-06-11)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (14, 2025-06-29)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (14, 2025-09-14)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (14, 2025-09-21)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (14, 2025-10-12)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (14, 2025-12-17)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (15, 2025-07-02)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (15, 2025-07-09)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (15, 2025-08-20)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (15, 2025-09-10)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (17, 2025-03-26)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (17, 2025-08-03)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (17, 2025-08-27)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (17, 2025-09-17)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (17, 2025-10-22)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (18, 2025-07-06)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (18, 2025-10-26)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (18, 2025-12-14)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (19, 2025-02-19)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (19, 2025-05-22)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (19, 2025-06-01)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (19, 2025-08-17)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (19, 2025-09-24)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (19, 2025-12-24)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (20, 2025-02-26)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (20, 2025-03-19)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (20, 2025-05-18)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (20, 2025-06-08)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (20, 2025-07-30)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (20, 2025-08-10)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (20, 2025-10-05)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (20, 2025-10-15)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (20, 2025-12-21)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (20, 2025-12-28)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (20, 2025-12-31)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (21, 2025-03-09)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (21, 2025-05-11)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (21, 2025-06-22)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (21, 2025-07-20)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (21, 2025-09-07)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (21, 2025-10-01)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (22, 2025-03-16)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (22, 2025-04-06)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (22, 2025-04-30)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (22, 2025-06-15)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (22, 2025-06-25)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (22, 2025-10-19)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (23, 2025-04-09)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (23, 2025-05-07)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (23, 2025-05-14)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (23, 2025-06-18)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (23, 2025-10-08)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (23, 2025-12-07)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (24, 2025-03-02)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (24, 2025-03-05)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (24, 2025-05-28)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (24, 2025-08-06)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (24, 2025-08-24)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (24, 2025-09-03)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (24, 2025-09-28)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (25, 2025-02-23)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (25, 2025-03-29)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (25, 2025-04-02)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (25, 2025-04-16)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (25, 2025-05-04)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (25, 2025-07-23)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (25, 2025-07-27)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (25, 2025-08-13)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (25, 2025-08-31)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (25, 2025-12-03)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (25, 2025-12-10)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (30, 2025-05-25)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (30, 2025-03-12)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (30, 2025-06-04)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (30, 2025-07-13)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (30, 2025-07-16)
+
+---------------------------------------------------
+
+Acomodadores 2 hora antes del /
+
+
+NSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (14, 2025-03-02)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (14, 2025-05-11)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (14, 2025-07-06)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (14, 2025-08-27)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (14, 2025-12-10)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (15, 2025-06-01)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (15, 2025-06-22)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (15, 2025-09-21)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (15, 2025-09-28)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (15, 2025-10-01)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (16, 2025-03-19)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (16, 2025-05-22)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (16, 2025-07-23)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (17, 2025-04-06)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (17, 2025-05-14)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (17, 2025-06-08)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (17, 2025-07-13)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (17, 2025-07-16)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (17, 2025-07-30)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (17, 2025-08-17)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (17, 2025-12-28)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (18, 2025-02-23)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (18, 2025-03-12)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (18, 2025-04-20)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (18, 2025-05-04)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (18, 2025-05-07)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (18, 2025-06-29)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (18, 2025-08-13)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (18, 2025-09-24)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (18, 2025-10-05)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (18, 2025-10-12)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (18, 2025-12-17)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (19, 2025-03-16)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (19, 2025-03-23)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (19, 2025-06-11)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (19, 2025-12-21)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (19, 2025-12-31)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (20, 2025-03-26)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (20, 2025-07-09)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (20, 2025-09-10)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (20, 2025-09-17)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (20, 2025-10-22)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (20, 2025-12-07)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (21, 2025-05-25)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (21, 2025-08-10)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (21, 2025-08-20)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (21, 2025-08-31)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (21, 2025-10-19)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (22, 2025-02-26)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (22, 2025-05-28)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (22, 2025-06-04)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (22, 2025-07-02)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (22, 2025-09-07)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (23, 2025-03-09)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (23, 2025-04-30)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (23, 2025-06-15)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (23, 2025-08-06)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (23, 2025-08-24)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (23, 2025-09-14)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (23, 2025-10-15)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (23, 2025-12-03)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (23, 2025-12-24)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (24, 2025-02-19)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (24, 2025-03-29)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (24, 2025-04-02)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (24, 2025-10-26)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (25, 2025-03-05)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (25, 2025-04-09)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (25, 2025-06-18)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (25, 2025-07-20)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (25, 2025-08-03)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (25, 2025-09-03)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (25, 2025-10-08)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (25, 2025-12-14)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (30, 2025-04-16)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (30, 2025-05-18)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (30, 2025-06-25)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (30, 2025-07-27)
+
+----------------------------------------------------------
+
+Acomodadores 1 antes del /
+
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (14, 2025-05-25)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (14, 2025-04-06)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (14, 2025-06-22)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (14, 2025-07-23)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (14, 2025-08-17)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (14, 2025-09-28)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (14, 2025-12-28)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (15, 2025-07-06)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (15, 2025-09-03)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (16, 2025-05-14)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (16, 2025-06-18)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (16, 2025-08-13)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (16, 2025-09-24)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (16, 2025-12-10)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (17, 2025-03-02)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (17, 2025-03-23)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (17, 2025-05-18)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (17, 2025-06-29)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (17, 2025-08-10)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (17, 2025-10-05)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (18, 2025-05-11)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (18, 2025-07-16)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (18, 2025-08-20)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (18, 2025-09-07)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (18, 2025-10-19)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (19, 2025-03-09)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (19, 2025-03-26)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (19, 2025-04-09)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (19, 2025-04-30)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (19, 2025-07-13)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (19, 2025-07-30)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (19, 2025-08-06)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (19, 2025-12-03)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (20, 2025-03-16)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (20, 2025-04-02)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (20, 2025-06-01)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (20, 2025-06-11)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (20, 2025-08-27)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (20, 2025-12-17)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (21, 2025-02-23)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (21, 2025-05-04)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (21, 2025-06-15)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (21, 2025-08-24)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (21, 2025-09-21)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (21, 2025-10-12)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (21, 2025-12-14)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (22, 2025-03-05)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (22, 2025-04-16)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (22, 2025-05-07)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (22, 2025-05-22)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (22, 2025-08-31)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (22, 2025-09-10)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (22, 2025-10-01)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (22, 2025-10-08)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (22, 2025-12-07)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (22, 2025-12-24)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (23, 2025-02-26)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (23, 2025-03-29)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (23, 2025-04-20)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (23, 2025-05-28)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (23, 2025-06-08)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (23, 2025-07-09)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (23, 2025-07-27)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (23, 2025-08-03)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (23, 2025-10-26)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (23, 2025-12-31)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (24, 2025-04-12)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (24, 2025-06-25)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (24, 2025-07-20)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (24, 2025-09-14)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (24, 2025-10-15)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (25, 2025-03-12)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (25, 2025-03-19)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (25, 2025-06-04)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (25, 2025-07-02)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (25, 2025-09-17)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (25, 2025-10-22)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (25, 2025-12-21)
+INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES (30, 2025-02-19)
