@@ -1,6 +1,6 @@
 import random
 import tkinter as tk 
-from tkinter import ttk, END, font, PhotoImage, messagebox, Text, Toplevel, LEFT, Menu
+from tkinter import ttk, END, font, PhotoImage, messagebox, Text, Toplevel, LEFT, Menu, RIGHT
 from PIL import Image
 import locale
 import datetime
@@ -12,7 +12,9 @@ import Seccion_treeview
 import Seccion_base_datos
 import Fondos 
 import platform
+import sys, os
 from actualizaciones.comprobaciones import verificar_actualizacion
+
 
 class Aplicacion : 
 
@@ -51,6 +53,7 @@ class Aplicacion :
 
         self.validar_iconos_segun_sistema()
         
+        
         self.final()
         
     #==================================================================================================  
@@ -72,6 +75,17 @@ class Aplicacion :
         self.root.after(1000, self.actualizar_reloj)
         
     
+    def resource_path(self, relative_path):
+        """Obtiene la ruta absoluta del recurso, compatible con PyInstaller."""
+        try:
+            # PyInstaller crea una carpeta temporal con los recursos empaquetados
+            base_path = sys._MEIPASS
+        except Exception:
+            base_path = os.path.abspath(".")
+        return os.path.join(base_path, relative_path)
+
+        
+    
     def validar_iconos_segun_sistema (self) : 
 
 
@@ -81,7 +95,7 @@ class Aplicacion :
             
         else :
             
-            icon = tk.PhotoImage(file="Programa/img/cuaderno.png")
+            icon = tk.PhotoImage(file= self.resource_path("Programa/img/cuaderno.png"))
             self.root.iconphoto(True, icon)
             
     
@@ -211,7 +225,7 @@ class Aplicacion :
                                 'Coronel Vanesa', 'Deiana Ruth', 'Dominguez Alejandra', 
                                 'Dominguez Miriam', 'Encina Mónica', 'Ferreira Rocio', 
                                 'Gomez Yanina', 'Gonzalez Iris', 'Israelson Analia', 
-                                'Ledesma Susana', 'Quiroz Rosario', 'Sotelo Rosa', 
+                                'Ledesma Susana', 'Quiroz Rosario', 'Sotelo Rosa', 'Valiente Brisa'
                                 'Valiente Fátima', 'Valiente Silvia', 'Viera Valeria']
         
         Seccion_vigilancia.ordenamiento(self.lista_vigilancia, self.listbox_vigilancia)
@@ -258,11 +272,11 @@ class Aplicacion :
 
         #Fechas
         fecha = datetime.datetime.now().date()
-        self.fechas_especiales_de_asamblea = [datetime.date(2025, 4, 27), datetime.date(2025, 10, 31)]
-        nombre_de_eventos = ["Asamblea de circuito 2024-2025\n(Con el representante de la sucursal)\n\n'No nos avergonzamos\nde las buenas noticias'. (Rom. 1:16)",
-                            "Asamblea Regional 2025\n\n         Adoración Pura\n(Mat. 4:10; Juan. 2:17; Juan. 4:23)"]
+        self.fechas_especiales_de_asamblea = [datetime.date(2025, 10, 31), datetime.date(2026, 3, 22)]
+        nombre_de_eventos = ["Asamblea Regional 2025\n\n         Adoración Pura\n(Mat. 4:10; Juan. 2:17; Juan. 4:23)",
+                            "Asamblea de circuito con el\nrepresentante de la sucursal"]
 
-        dias_de_reuniones_especiales_entre_semana = [datetime.date(2025, 7, 7)]
+        dias_de_reuniones_especiales_entre_semana = [datetime.date(2025, 7, 7), datetime.date(2026, 4, 2)]
         dias_de_reuniones_especiales_fin_de_semana = []
 
         dias_especiales_formato_estandar_entre_semana = Seccion_fechas.convertir_fechas_entre_semana_especiales_a_formato_estandar(dias_de_reuniones_especiales_entre_semana)
@@ -306,7 +320,7 @@ class Aplicacion :
 
         #Multiplico el ciclo de grupos recorrido (De esa manera, por cada semana está el ciclo adecuado de grupos)
         #Debe ser Domingo para que no haya cambios durante la semana
-        fecha_final_grupos = datetime.date(2033, 1, 30)
+        fecha_final_grupos = datetime.date(2033, 2, 6)
         diferencia_grupos = fecha_final_grupos - fecha
         dias_a_semanas_grupos = diferencia_grupos.days // 7
         grupos_ordenados_por_semanas = dias_a_semanas_grupos
@@ -649,9 +663,9 @@ class Aplicacion :
 
         ventana_emergente = tk.Toplevel(self.pagina_2)
         ventana_emergente.title("Selecciona el tipo de convertor")
-        ventana_emergente.geometry("330x250")
+        ventana_emergente.geometry("600x600")
         ventana_emergente.resizable(False, False) 
-        ventana_emergente.wm_maxsize(400, 300) 
+        ventana_emergente.wm_maxsize(600, 600) 
         ventana_emergente.wm_attributes("-topmost", True)
 
         nombre_del_mes_seleccioando = self.entrada_de_seleccion_de_lista.get()
@@ -680,13 +694,21 @@ class Aplicacion :
             ventana_emergente.destroy()
 
 
+        def convertir_datos_del_mes_por_whatsapp () : 
+
+            funcion_wspp_mes_especifico = Seccion_base_datos.convertir_datos_del_mes_por_word_whatsapp(numero_del_mes_seleccionado, nombre_del_mes_seleccioando)
+            messagebox.showinfo("Información", "Los datos han sido convertidos a mensaje de Whatsapp exitosamente")
+            ventana_emergente.destroy()
+
         boton_word = tk.Button(ventana_emergente, text = "Word", background = "#1976D2", foreground = "white" , relief = "groove" , activebackground = "gray95" , activeforeground = "#333333" , border = 10, width = 10, command = convertir_datos_del_mes_por_word)
         boton_pdf = tk.Button(ventana_emergente, text = "PDF", background = "#1976D2", foreground = "white" , relief = "groove" , activebackground = "gray95" , activeforeground = "#333333" , border = 10, width = 10, command = convertir_datos_del_mes_por_pdf)
         boton_excel = tk.Button(ventana_emergente, text = "Excel", background = "#1976D2", foreground = "white" , relief = "groove" , activebackground = "gray95" , activeforeground = "#333333" , border = 10, width = 10, command = convertir_datos_del_mes_por_excel)
+        boton_whatsapp = tk.Button(ventana_emergente, text = "WhatsApp", background = "#1976D2", foreground = "white" , relief = "groove" , activebackground = "gray95" , activeforeground = "#333333" , border = 10, width = 10, command = convertir_datos_del_mes_por_whatsapp)
 
         boton_word.pack(side = LEFT, padx = 4)
         boton_pdf.pack(side = LEFT, padx = 4)
-        boton_excel.pack(side = LEFT, padx = 4)
+        boton_excel.pack(side = RIGHT, padx = 4)
+        boton_whatsapp.pack(side = RIGHT, padx = 4)
 
 
     def transportar_datos_a_aplicacion_movil (self) : 

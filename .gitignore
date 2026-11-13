@@ -1,0 +1,16 @@
+.venv
+.vscode
+archivos_v1
+build
+dist
+mysql
+Programa/__pycache__
+Acomodadores.desktop
+Asignaciones_de_Agosto_2025_WhatsApp.txt
+asignaciones_de_congregacion.db
+Asignaciones_de_Diciembre_2025_WhatsApp.html
+Asignaciones.spec
+lista.txtbuild/
+dist/
+*.pkg
+*.zip

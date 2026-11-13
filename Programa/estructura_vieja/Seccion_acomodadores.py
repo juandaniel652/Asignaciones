@@ -1,0 +1,11 @@
+def ordenamiento (lista, listbox) : 
+        
+    lista.sort()
+
+    indice = 0
+
+    for i in lista : 
+        listbox.insert(indice, i)
+        indice = indice  + 1
+
+    return lista, listbox

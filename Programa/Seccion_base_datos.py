@@ -1,5 +1,6 @@
 import sqlite3 as sql
 import Elementos_word   
+import convertidorMensajeWhatsApp
 import pandas as pd
 from docx2pdf import convert
 import datetime
@@ -132,6 +133,112 @@ def pasar_datos_word () :
         
     generador_de_documentos_word = Elementos_word.generar_documento_word(lista_de_titulos_de_acomodadores_vigilancia, lista_de_los_parrafos_general, lista_dias_de_reunion, cantidad_de_datos)
     generador_de_documentos_word.save("Asignaciones.docx")
+    
+    
+def convertir_datos_del_mes_por_word_whatsapp(numero_del_mes_seleccionado, nombre_del_mes_seleccionado):
+
+    fecha_actual = datetime.datetime.now()
+    año_actual = fecha_actual.year
+
+    # === 1️⃣ Buscar datos en la base
+    conectar_base = sql.connect("asignaciones_de_congregacion.db")
+    cursor = conectar_base.cursor()
+    cursor.execute(
+        "SELECT * FROM asignaciones WHERE Dias_reunion LIKE ? OR Dias_reunion LIKE ?",
+        (f"%- 0{numero_del_mes_seleccionado} - {año_actual}%",
+         f"%- {numero_del_mes_seleccionado} - {año_actual}%")
+    )
+    datos = cursor.fetchall()
+    conectar_base.close()
+
+    # === Listas donde vamos guardando
+    lista_dias_de_reunion = []
+    lista_de_los_parrafos_general = []
+
+    # === 2️⃣ Procesar filas
+    for fila in datos:
+        acomodadores_primera_hora = fila[1]
+        acomodadores_segunda_hora = fila[2]
+        acomodador_ultima_hora = fila[3]
+        vigilancia_primera_hora = fila[4]
+        vigilancia_segunda_hora = fila[5]
+        dias_de_reuniones = fila[7]
+
+        parrafos = [
+            [
+                f"Acomodadores 1° Hora: {acomodadores_primera_hora}",
+                f"Acomodadores 2° Hora: {acomodadores_segunda_hora}",
+                f"Acomodador después de la reunión: {acomodador_ultima_hora}"
+            ],
+            [
+                f"Vigilancia 1° Hora: {vigilancia_primera_hora}",
+                f"Vigilancia 2° Hora: {vigilancia_segunda_hora}"
+            ]
+        ]
+
+        lista_dias_de_reunion.append(dias_de_reuniones)
+        lista_de_los_parrafos_general.append(parrafos)
+
+    # === 3️⃣ Construir el HTML (fuera del for anterior)
+
+    html_contenido = """
+        <meta charset="UTF-8">
+
+        <style>
+            body { 
+                font-family: Arial, sans-serif; 
+                padding: 20px;
+                line-height: 1.5;
+                white-space: pre-line;
+            }
+            .bloque { margin-bottom: 60px; }
+            .titulo-dia { font-size: 20px; font-weight: bold; margin-bottom: 25px; }
+            .linea { margin: 20px 0; font-weight: bold; }
+            .bloque-titulo { margin: 30px 0 20px 0; font-family: monospace; font-size: 18px; }
+            .item { margin: 20px 0; }
+        </style>
+        """
+
+    # === 4️⃣ Generar bloques por cada día
+    for i in range(len(lista_dias_de_reunion)):
+
+        html_contenido += f"""
+        <div class="bloque">
+        
+        {lista_dias_de_reunion[i]}
+        
+        _________________________
+        
+        ```ACOMODADORES```
+        _________________________
+        
+        *{lista_de_los_parrafos_general[i][0][0]}*
+        
+        *{lista_de_los_parrafos_general[i][0][1]}*
+        
+        *{lista_de_los_parrafos_general[i][0][2]}*
+        
+        _________________________
+        
+        ```VIGILANCIA```
+        _________________________
+        
+        *{lista_de_los_parrafos_general[i][1][0]}*
+        
+        *{lista_de_los_parrafos_general[i][1][1]}*
+        
+        _________________________
+        
+        </div>
+        """
+
+    # === 5️⃣ Guardar archivo (solo una vez)
+    nombre_archivo_html = f"Asignaciones_de_{nombre_del_mes_seleccionado}_{año_actual}_WhatsApp.html"
+
+    with open(nombre_archivo_html, "w", encoding="utf-8") as archivo_html:
+        archivo_html.write(html_contenido)
+
+    print(f"✅ Archivo HTML generado correctamente:\n- {nombre_archivo_html}")
 
 
 def pasar_datos_pdf () : 
