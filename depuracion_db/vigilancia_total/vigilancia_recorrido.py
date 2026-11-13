@@ -230,4 +230,4 @@ for x in range (3):
                 dia = encontrar_dia (fecha)
                 fecha_iso = armar_fecha_formato_iso (dia, mes, anio)
                 #print (f"Fecha: {fecha_formateada}")
-                print(f"INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES ({persona['nombre']}, {fecha_iso})")
+                print(f"INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES ({persona['id']}, {fecha_iso})")
