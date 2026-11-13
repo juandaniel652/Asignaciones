@@ -15,8 +15,8 @@ def query_count_de_asignaciones (nombre, apellido):
 
     cursor.execute(f"SELECT COUNT(Dias_reunion) FROM asignaciones WHERE Acomodador_final = '{apellido} {nombre}'")
     count = cursor.fetchone()[0]
-    print(count)
-
+    if count == []:
+        return 1
 
     return count
 
@@ -29,9 +29,12 @@ def obtener_fecha_con_indice_para_iterar (lista, indice):
 
 def obtener_fecha (lista):    
 
+    if lista == []:
+        return 0
     tuplas = lista[0]
     dia_y_fecha = tuplas[0]
     fecha = dia_y_fecha[-14:]
+
     return fecha
 
 def encontrar_anio (fecha)  :
@@ -173,18 +176,23 @@ while bucle < largo_lista_acomodadores:
 
     diccionario = lista_acomodadores[bucle]
 
+
+        
     lista =  query_acomodador_final(diccionario["nombre"], diccionario["apellido"])
+
     fecha = obtener_fecha(lista)
 
     total_asignaciones = query_count_de_asignaciones(diccionario["nombre"], diccionario["apellido"])
-    #Programa Principal
-    for a in range (total_asignaciones): 
-        print(diccionario["nombre"])
+    #print(f"Nombre: {diccionario['nombre']} {diccionario['apellido']}")
+    if lista != []:
+        #Programa Principal
+        for a in range (total_asignaciones): 
 
-        fecha = obtener_fecha_con_indice_para_iterar(lista, a)
-        anio = encontrar_anio(fecha)
-        mes = encontrar_mes (fecha)
-        dia = encontrar_dia (fecha)
-        fecha_iso = armar_fecha_formato_iso(dia, mes, anio)
-        print(fecha_iso)
+            fecha = obtener_fecha_con_indice_para_iterar(lista, a)
+            anio = encontrar_anio(fecha)
+            mes = encontrar_mes (fecha)
+            dia = encontrar_dia (fecha)
+            fecha_iso = armar_fecha_formato_iso(dia, mes, anio)
+            #print(fecha_iso)
+            print(f"INSERT INTO asignacion_personal (personal_id, asignacion_id) VALUES ({bucle + 14}, {fecha_iso})")
     bucle = bucle + 1

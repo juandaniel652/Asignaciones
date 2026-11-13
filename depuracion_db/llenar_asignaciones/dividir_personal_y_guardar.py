@@ -345,6 +345,8 @@ lista_diccionario_vigilancia = [{"id": 32,
   "apellido": "Alegre", 
   "estado": True, 
   "tipo_labor": "vigilancia"}
+  
+  #LLevar a Candela Paladino a pgAdmin4 seria Id 59
   ]
 
 
